@@ -48,10 +48,10 @@ public class SvenskaSpelData {
 
     private void retrieveJSONFromUrl() {
         JSONObject obj = null;
+        /*  stryktipset can be changed to europatipset if wanted */
         String url = "https://api.www.svenskaspel.se/external/draw/stryktipset/draws?accesskey=" + ApiKey.myApiKey();
         try {
             obj = readJsonFromUrl(url);
-            //obj = readJsonFromUrl("https://api.www.svenskaspel.se/external/draw/europatipset/draws?accesskey=8d29068e-7a93-4ecc-aaea-959aee866ab1");
         } catch (IOException e) {
             e.printStackTrace();
         }
